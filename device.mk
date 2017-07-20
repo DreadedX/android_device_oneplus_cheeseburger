@@ -77,6 +77,34 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=25
 
+# Custom Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.fiveten.version=1.3 \
+    ro.opa.eligible_device=true
+
+# Custom packages
+PRODUCT_PACKAGES += \
+    ViperFX \
+    MagiskManager \
+    Substratum \
+    ThemeInterfacer \
+    ParanoidPapers
+
+# OpenGApps
+GAPPS_VARIANT := nano
+
+PRODUCT_PACKAGES += \
+    CalculatorGoogle \
+    CalendarGooglePrebuilt \
+    Chrome \
+    GoogleDialer \
+    PrebuiltDeskClockGoogle \
+    PrebuiltBugle \
+    LatinImeGoogle
+    
+GAPPS_FORCE_PACKAGE_OVERRIDES := true
+GAPPS_FORCE_MATCHING_DPI := true
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
@@ -321,3 +349,6 @@ PRODUCT_COPY_FILES += \
 
 # Inherit from oppo-common
 $(call inherit-product, device/oppo/common/common.mk)
+
+# Inherit OpenGApps
+$(call inherit-product, vendor/google/build/opengapps-packages.mk)
