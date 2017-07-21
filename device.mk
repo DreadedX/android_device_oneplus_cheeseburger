@@ -77,7 +77,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=25
 
-<<<<<<< HEAD
 # Custom Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fiveten.version=1.3 \
@@ -105,7 +104,7 @@ PRODUCT_PACKAGES += \
     
 GAPPS_FORCE_PACKAGE_OVERRIDES := true
 GAPPS_FORCE_MATCHING_DPI := true
-#
+
 # Allow tethering without provisioning app
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
